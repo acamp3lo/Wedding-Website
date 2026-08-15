@@ -1,0 +1,282 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.4rem;
+}
+
+main > h1 {
+    padding: 6rem 0 2.5rem 0;
+    text-align: center;
+    font-family: 'Moret', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 3rem);
+}
+
+main > .adminPanelSection {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-pallet-2);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: 40%;
+}
+
+main > #importSection > p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-pallet-3);
+}
+
+main > .adminPanelSection > h2 {
+    padding-bottom: 1rem;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.4rem;
+}
+
+main > .adminPanelSection > form {
+    width: 100%;
+}
+
+main > .adminPanelSection > #importCSVForm {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    border: 1px dotted var(--color-pallet-2);
+    border-radius: 0.5rem;
+}
+
+main > .adminPanelSection button,
+main > .adminPanelSection input[type=submit],
+main > .adminPanelSection a {
+    width: 100%;
+    padding: 0.3rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
+    background-color: var(--color-pallet-2);
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    color: var(--color-pallet-1);
+    font-size: 1rem;
+    text-wrap: auto;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1.2rem;
+}
+main > .adminPanelSection button:hover,
+main > .adminPanelSection input[type=submit]:hover,
+main > .adminPanelSection a:hover {
+    border: 2px solid var(--color-pallet-4);
+}
+
+main > .adminPanelSection input[type=file]::file-selector-button {
+    cursor: pointer;
+    background-color: var(--color-pallet-1);
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    color: var(--color-pallet-2);
+    font-size: 1rem;
+    padding: 0.1rem 1.2rem;
+}
+main > .adminPanelSection input[type=file]::file-selector-button:hover {
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+}
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--color-pallet-2);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
+
+thead,
+tfoot {
+  background-color: var(--color-pallet-2);
+  color: var(--color-pallet-1);
+}
+
+th,
+td {
+  border: 1px solid var(--color-pallet-2);
+  padding: 0.4rem;
+  max-width: 20rem;
+  overflow: hidden;
+}
+
+thead th {
+    border: 1px solid var(--color-pallet-4);
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot td {
+    text-align: end;
+}
+tfoot td:first-child {
+    padding-right: 1rem;
+}
+
+tbody svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.iconTransition {
+    transition: all 0.15s;
+}
+
+tbody .deleteSVG {
+    cursor: pointer;
+}
+
+tbody .deleteSVG:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+tbody .deleteSVG > * {
+    stroke: red;
+}
+tbody .trueSVG > * {
+    stroke: green;
+    fill: green;
+}
+tbody .falseSVG > * {
+    stroke: red;
+}
+
+.deleteModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    max-height: 40vh;
+    background-color: var(--color-pallet-1);
+    border-radius: 1rem;
+    border: 1.5px solid var(--color-pallet-2);
+    overflow: auto;
+    box-shadow: 1px 1px 8px rgba(7, 8, 29, 0.5);
+    z-index: 3;
+}
+
+.deleteModal > h3 {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+}
+
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    color: var(--color-pallet-3);
+}
+
+.modalInfo > p > span {
+    padding-left: 0.3rem;
+}
+
+.deleteModal > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.deleteModal > form > button {
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+    padding: 0.5rem 0;
+    cursor: pointer;
+    width: 30%;
+}
+.deleteModal > form > button:hover {
+    /* background-color: var(--color-pallet-2); */
+    border: 2px solid var(--color-pallet-4);
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    max-width: 80%;
+}
+#loginForm input {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid var(--color-pallet-2);
+    background-color: white;
+    color: var(--color-pallet-4);
+}
+#loginForm input:focus {
+    outline: ridge var(--color-pallet-2);
+}
+#loginForm label {
+    margin-bottom: 0.3rem;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+}
+#loginForm button {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: var(--color-pallet-2);
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    color: var(--color-pallet-1);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#loginForm button:hover {
+    border: 2px solid var(--color-pallet-4);
+    color: white;
+}
+
+#logoutForm {
+    margin-top: 4rem;
+}
+#logoutForm input[type=submit] {
+    width: 100%;
+    padding: 0.5rem 2.5rem;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background-color: var(--color-pallet-1);
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    color: var(--color-pallet-2);
+    cursor: pointer;
+}
+#logoutForm input[type=submit]:hover {
+    color: var(--color-pallet-4);
+    border: 2px solid var(--color-pallet-4);
+}
+
+@media (max-width: 768px) {
+    main > .adminPanelSection {
+        width: 90%;
+    }
+}

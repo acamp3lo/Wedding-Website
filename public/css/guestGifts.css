@@ -1,0 +1,341 @@
+#guestGiftModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    min-height: 45vh;
+    max-height: 85vh;
+    background-color: var(--color-pallet-1);
+    border-radius: 1rem;
+    border: 1px solid var(--color-pallet-2);
+    overflow: auto;
+    box-shadow: 1px 1px 8px rgba(7, 8, 29, 0.5);
+    z-index: 3;
+}
+
+#guestGiftModal > header > .closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#guestGiftModal > header > .closeBtn > svg {
+    width: 100%;
+    height: 100%;
+}
+#guestGiftModal > header > .closeBtn > svg > * {
+    fill: var(--color-pallet-2);
+}
+#guestGiftModal > header > .closeBtn:hover > svg > * {
+    fill: var(--color-pallet-4);
+}
+
+#guestGiftModal > header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-pallet-2);
+    padding: 1rem 0;
+}
+
+#guestGiftModal > header > h2 {
+    font-family: 'Moret', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.03rem;
+    margin: 0;
+}
+
+#guestGiftModal > #itemName {
+    text-align: center;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+#guestGiftModal > .instructions {
+    padding: 1rem 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.2rem;
+}
+
+#guestGiftModal > .bankInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    padding: 1rem 0.5rem 0.8rem 0.5rem;
+    text-align: center;
+}
+
+#guestGiftModal > form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+#guestGiftModal > form > .guestInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#guestGiftModal > form > .guestInfo > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+}
+#guestGiftModal > form > .guestInfo input, #guestGiftModal > form > .guestInfo textarea {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid var(--color-pallet-2);
+    background-color: white;
+    color: var(--color-pallet-4);
+}
+#guestGiftModal > form > .guestInfo input[type="text"] {
+    width: 100%;
+}
+#guestGiftModal > form > .guestInfo input[type="number"] {
+    width: 35%;
+}
+#guestGiftModal > form > .guestInfo input:focus, #guestGiftModal > form > .guestInfo textarea:focus {
+    outline: ridge var(--color-pallet-2);
+}
+
+#guestGiftModal > form > input[type="submit"] {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border: 2px solid var(--color-pallet-2);
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+}
+#guestGiftModal > form > input[type="submit"]:hover {
+    border: 2px solid var(--color-pallet-4);
+    color: white;
+}
+
+#guestGiftModal > form > .guestInfo > div label {
+    margin-bottom: 0.5rem;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+}
+
+#guestGiftModal > form > .guestInfo textarea {
+    resize: none;
+}
+
+body > main {
+    padding: 0 6rem;
+}
+
+main > h1 {
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    font-family: 'Moret', sans-serif;
+    font-size: clamp(3rem, 8vw, 4rem);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+main > p {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    margin: 0;
+    padding: 0 0 4rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#giftsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.gift {
+    border: 1px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.giftName {
+    font-family: 'Moret', sans-serif;
+    font-size: 1.8rem;
+}
+
+.gift > svg {
+    width: 8rem;
+    height: 8rem;
+    margin: 1.5rem 0;
+}
+.gift > img.giftImage {
+    width: 10rem;
+    height: 10rem;
+    margin: 1.5rem 0;
+}
+.gift > svg path, .gift > svg polygon, .gift > svg rect, .gift > svg circle {
+    fill: var(--color-pallet-svg);
+}
+
+.gift > p:not(.giftName) {
+    font-family: 'Moret', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.gift > .giftActions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.gift > .giftActions > button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+    border: 3px solid var(--color-pallet-2);
+    cursor: pointer;
+    width: 100%;
+    min-height: 3rem;
+    transition: all 0.15s ease;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.gift > .giftActions > button:hover {
+    /* background-color: var(--color-pallet-2); */
+    color: white;
+    border: 3px solid var(--color-pallet-4);
+}
+
+.gift > .giftActions > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    background-color: var(--color-pallet-1);
+    color: var(--color-pallet-2);
+    width: 100%;
+    text-align: center;
+    user-select: none;
+}
+
+.gift > progress {
+    appearance: none;   /* Removes default platform styling */
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 0.7rem;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    background-color: var(--color-pallet-1);
+    border: 1px solid var(--color-pallet-2);
+}
+/* Chrome, Safari, and newer versions of Edge */
+progress::-webkit-progress-bar {
+  background-color: var(--color-pallet-1); /* The track (background) */
+}
+progress::-webkit-progress-value {
+  background-color: var(--color-pallet-2); /* The actual bar color */
+}
+/* Firefox */
+progress::-moz-progress-bar {
+  background-color: var(--color-pallet-2);
+}
+
+
+
+#confirmationModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    max-height: 50vh;
+    background-color: var(--color-pallet-1);
+    border-radius: 1rem;
+    border: 1.5px solid var(--color-pallet-2);
+    overflow: auto;
+    box-shadow: 1px 1px 8px rgba(7, 8, 29, 0.5);
+    z-index: 3;
+}
+#confirmationModal > h3 {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+}
+#confirmationModal > .contributionInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    color: var(--color-pallet-3);
+}
+
+#confirmationModal > .contributionInfo > p > span {
+    padding-left: 0.3rem;
+}
+
+#confirmationModal > .confirmationActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+#confirmationModal > .confirmationActions > button {
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+    padding: 0.5rem 0;
+    cursor: pointer;
+    width: 30%;
+}
+#confirmationModal > .confirmationActions > button:hover {
+    /* background-color: var(--color-pallet-2); */
+    border: 2px solid var(--color-pallet-4);
+}
+
+
+
+@media (max-width: 768px) {
+    body > main {
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
+    #guestGiftModal {
+        width: 90vw;
+    }
+    #confirmationModal {
+        width: 90vw;
+    }
+}

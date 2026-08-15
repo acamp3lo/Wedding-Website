@@ -1,0 +1,132 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h1 {
+    margin: 3.5rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--color-pallet-2);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+thead,
+tfoot {
+  background-color: var(--color-pallet-2);
+  color: var(--color-pallet-1);
+}
+
+th,
+td {
+  border: 1px solid var(--color-pallet-2);
+  padding: 0.5rem;
+}
+
+thead th {
+    border: 1px solid var(--color-pallet-4);
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot td {
+    text-align: end;
+}
+tfoot td:first-child {
+    padding-right: 1rem;
+}
+
+tbody svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.iconTransition {
+    transition: all 0.15s;
+}
+
+tbody .deleteSVG {
+    cursor: pointer;
+}
+
+tbody .deleteSVG:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+tbody .deleteSVG > * {
+    stroke: red;
+}
+tbody .trueSVG > * {
+    stroke: green;
+    fill: green;
+}
+tbody .falseSVG > * {
+    stroke: red;
+}
+
+#deleteConfirmationModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    max-height: 40vh;
+    background-color: var(--color-pallet-1);
+    border-radius: 1rem;
+    border: 1.5px solid var(--color-pallet-2);
+    overflow: auto;
+    box-shadow: 1px 1px 8px rgba(7, 8, 29, 0.5);
+    z-index: 3;
+}
+
+#deleteConfirmationModal > h3 {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+}
+
+#confirmationInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    color: var(--color-pallet-3);
+}
+
+#confirmationInfo > p > span {
+    padding-left: 0.3rem;
+}
+
+#deleteConfirmationModal > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+#deleteConfirmationModal > form > button {
+    border: 2px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+    padding: 0.5rem 0;
+    cursor: pointer;
+    width: 30%;
+}
+#deleteConfirmationModal > form > button:hover {
+    /* background-color: var(--color-pallet-2); */
+    border: 2px solid var(--color-pallet-4);
+}
+

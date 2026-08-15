@@ -1,0 +1,67 @@
+{
+    "accommodations": [
+    {
+      "name": "Accomodation 1",
+      "location": "123 Main St, London",
+      "link": "https://www.google.com",
+      "image_name": "01.jpg",
+      "distance": "10 minutes"
+    },
+    {
+      "name": "Accomodation 2",
+      "location": "456 Oak Ave, London",
+      "link": "https://www.google.com",
+      "image_name": "02.jpg",
+      "distance": "15 minutes"
+    },
+    {
+      "name": "Accomodation 3",
+      "location": "789 Pine Rd, London",
+      "link": "https://www.google.com",
+      "image_name": "03.jpg",
+      "distance": "20 minutes"
+    },
+    {
+      "name": "Accomodation 4",
+      "location": "321 Elm St, London",
+      "link": "https://www.google.com",
+      "image_name": "04.jpg",
+      "distance": "25 minutes"
+    },
+    {
+      "name": "Accomodation 5",
+      "location": "567 Maple Dr, London",
+      "link": "https://www.google.com",
+      "image_name": "05.jpg",
+      "distance": "30 minutes"
+    },
+    {
+      "name": "Accomodation 6",
+      "location": "890 Cedar Ln, London",
+      "link": "https://www.google.com",
+      "image_name": "06.jpg",
+      "distance": "35 minutes"
+    },
+    {
+      "name": "Accomodation 7",
+      "location": "111 Oak St, London",
+      "link": "https://www.google.com",
+      "image_name": "07.jpg",
+      "distance": "30 minutes"
+    },
+    {
+      "name": "Accomodation 8",
+      "location": "444 Birch Ave, London",
+      "link": "https://www.google.com",
+      "image_name": "08.jpg",
+      "distance": "35 minutes"
+    },
+    {
+      "name": "Accomodation 9",
+      "location": "555 Spruce St, London",
+      "link": "https://www.google.com",
+      "image_name": "09.jpg",
+      "distance": "40 minutes"
+    }
+  ]
+}

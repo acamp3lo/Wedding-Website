@@ -1,0 +1,42 @@
+{
+  "enable_accommodations": true,
+  "enable_gift_list": true,
+  "enable_rsvp": true,
+  "enable_admin_link": true,
+  "enable_backup": true,
+  "backup_frequency": "daily",
+  "backup_expiration_days": 15,
+  "homepage_image_format": "svg",
+  "gift_list_image_format": "svg",
+  "CSV_delimiter": ";",
+  "bride_name": "Mary",
+  "groom_name": "James",
+  "wedding_date": "05/15/2026",
+  "wedding_location": "London, England",
+  "venue_location": "London House",
+  "venue_location_link": "https://maps.app.goo.gl/uqwxmxKF4KBei6WY9",
+  "ceremony_location": "London Church",
+  "ceremony_location_link": "https://maps.app.goo.gl/uqwxmxKF4KBei6WY9",
+  "header_message": [
+    "We Are Getting",
+    "Married!"
+  ],
+  "homepage_initial_message": [
+    "Dear Family and Friends,",
+    "We are thrilled to invite you to our wedding celebration! Please join us as we exchange vows and celebrate our love."
+  ],
+  "about_message": [
+    "The wedding ceremony will take place at the beautiful London Church, followed by a reception at the elegant London House. We look forward to sharing this special day with you."
+  ],
+  "where_to_stay_message": [
+    "We know that many of you will have to travel some (or a lot) of kilometers to be with us. For this reason, and because we don't want you to hit the road after the big celebration, we have a list of accommodations where you can book to spend the night - or even the weekend!"
+  ],
+  "gift_list_message": [
+    "The best gift you can give us is to be part of this great celebration. However, if you want to help us and, since we don't live together yet, you can contribute to furnishing our first home or to our honeymoon."
+  ],
+  "gift_list_instructions": [],
+  "dress_code": "Formal Attire",
+  "bride_phone": "123-456-7890",
+  "groom_phone": "098-765-4321",
+  "rsvp_deadline": "04/15/2026"
+}

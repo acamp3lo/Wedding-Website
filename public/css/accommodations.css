@@ -1,0 +1,87 @@
+main {
+    padding: 4rem 5rem 0 5rem;
+}
+h1, h2, h3 {
+    margin: 0;
+    font-family: 'Moret', sans-serif;
+}
+main > h1 {
+    font-size: clamp(3rem, 8vw, 4rem);
+    text-align: center;
+}
+
+main > p {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin: 0;
+    padding: 3rem 0 4rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#accommodationsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 10rem;
+}
+
+.accommodation {
+    border: 1px solid var(--color-pallet-2);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accommodation:hover {
+    border: 2px solid var(--color-pallet-4);
+}
+
+.accommodationName {
+    font-family: 'Moret', sans-serif;
+    font-size: 1.8rem;
+}
+.accommodationLocation {
+    font-family: 'Moret', sans-serif;
+    font-size: 1.5rem;
+}
+
+.accommodation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid var(--color-pallet-2);
+    border-radius: 0.5rem ;
+    margin: 1.5rem 0;
+}
+
+.accommodation > p:last-of-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#transportInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#transportInfo > h3 {
+    font-family: 'Moret', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+#transportInfo > ul {
+    list-style: inside;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+}
+#transportInfo > ul > li {
+    padding: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
+}

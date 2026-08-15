@@ -1,0 +1,333 @@
+:root {
+    --color-pallet-1: #eae6e1;
+    --color-pallet-2: #a74d4a;
+    --color-pallet-3: #818b7e;
+    --color-pallet-4: #121212;
+    --color-pallet-5: #ffffff;
+    --color-pallet-svg: #a74d4a;
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+@font-face {
+    font-family: 'Moret';
+    src: url('/fonts/Vidaloka-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+}
+
+a {
+    color: var(--color-pallet-2);
+    text-decoration: none;
+    text-align: center;
+}
+
+p, h1, h2, h3, h4 {
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-pallet-1);
+    color: var(--color-pallet-2);
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    border-bottom: 1px solid var(--color-pallet-2);
+    height: 4.8rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+header > .logo {
+    font-family: 'Moret', sans-serif;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+header > .logo #logoSVG {
+    width: 14rem;
+    height: auto;
+    stroke: var(--color-pallet-2);
+    fill: var(--color-pallet-2);
+}
+
+#mainNav {
+    height: 100%;
+    display: flex;
+}
+
+#mainNav > .nav-toggle {
+    display: none;
+}
+
+#mainNav > ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mainNav > ul > li {
+    list-style: none;
+    margin: 0 1.5rem;
+    font-family: 'Moret', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    display: flex;
+    align-items: center;
+}
+#mainNav > ul > li > a:hover {
+    color: var(--color-pallet-4);
+}
+
+#mainNav > ul > li > #rsvp-link, body > footer > div > a:not(.svgContainer) {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--color-pallet-2);
+    font-family: 'Moret', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+#mainNav > ul > li > #rsvp-link:hover, body > footer > div > a:hover:not(.svgContainer) {
+    background-color: var(--color-pallet-2);
+    color: var(--color-pallet-1);
+}
+
+body > footer .svgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > footer .svgContainer > svg {
+    width: 1.4rem;
+    height: auto;
+}
+
+body > footer .svgContainer > svg:hover > * {
+    stroke: var(--color-pallet-4);
+}
+
+body > footer .svgContainer > svg > * {
+    stroke: var(--color-pallet-2);
+}
+
+body > footer .svgContainer > svg > text {
+    fill: var(--color-pallet-2);
+}
+
+body > footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 7rem;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+body > footer > div:first-child {
+    font-family: 'Moret', sans-serif;
+    font-size: clamp(0.7rem, 4vw, 1.3rem);
+    letter-spacing: 0.05rem;
+}
+
+body > footer > div:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+body > footer > div > p:first-child {
+    padding-bottom: 0.7rem;
+}
+
+body > footer > div > p > span {
+    font-size: clamp(0.7rem, 4vw, 1.2rem);
+    padding-left: 0.3rem;
+}
+
+body > main {
+    min-height: calc(100vh - 19.8rem - 1px);
+}
+
+
+#messages {
+    position: fixed;
+    padding-top: 0.5rem;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+#messagesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#messagesContainer > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #398ead;
+    color: white;
+    /* min-height: 2.5rem; */
+    border-radius: 0.8rem;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: relative;
+    max-width: 100%;
+    padding: 0.8rem 2.6rem 0.8rem 2rem;
+    font-family: 'Moret', sans-serif;
+    letter-spacing: 0.03rem;
+    box-shadow: 1px 1px 8px rgba(7, 8, 29, 0.5);
+    opacity: 0;
+    transition: all 0.15s ease, opacity 0.6s ease;
+}
+#messagesContainer > article.success {
+    background-color: #3e8971;
+    border: 2px solid #5ba08a;
+}
+#messagesContainer > article.error {
+    background-color: #ea6d5f;
+    border: 2px solid #e4a394;
+}
+#messagesContainer > article:hover, #messagesContainer > article.opacity90:hover {
+    opacity: 1;
+    padding: 1.1rem 2.6rem 1.1rem 2rem;
+    transition: all 0.15s ease;
+}
+#messagesContainer > article.success:hover > .closeIcon svg > * {
+    fill: red;
+}
+#messagesContainer > article.error:hover > .closeIcon svg > * {
+    fill: white;
+}
+
+#messagesContainer > article > span {
+    scrollbar-width: none;
+    user-select: none;
+    text-align: justify;
+}
+
+#messagesContainer > article > .closeIcon {
+    position: absolute;
+    right: 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#messagesContainer > article.opacity90 {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    #messages {
+        width: 80%;
+    }
+    body > footer {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-pallet-2);
+        margin-top: 5rem;
+    }
+    body > footer > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body > footer > div:last-child {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    body > footer > div > a:not(.svgContainer) {
+        padding: 0.8rem 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+    body > footer > div > p:not(:first-child) {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body > footer > div > p:not(:first-child) > span {
+        text-align: center;
+    }
+    #mainNav > .nav-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 100; /* Keeps button on top of the menu */
+    }
+    /* Create the 3-line hamburger icon using pure CSS */
+    .hamburger, .hamburger::before, .hamburger::after {
+        display: block;
+        background: var(--color-pallet-2);
+        height: 3px;
+        width: 25px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+    .hamburger::before, .hamburger::after {
+        content: '';
+        position: absolute;
+    }
+    .hamburger::before { top: -8px; }
+    .hamburger::after { bottom: -8px; }
+    /* Transform the links into a hidden vertical mobile drawer */
+    #mainNav > ul {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Fully off-screen to the right by default */
+        height: 100vh;
+        width: 250px; /* Width of the mobile menu */
+        background-color: var(--color-pallet-1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px; /* Space down so links don't hide behind logo */
+        gap: 25px;
+        transition: right 0.3s ease-in-out; /* Smooth slide transition */
+        z-index: 50; /* Ensure menu is above other content */
+    }
+    /* Slide the navigation menu into view */
+    #mainNav > ul.active {
+        right: 0;
+    }
+    /* Morph the 3 horizontal lines into an "X" close button */
+    .nav-toggle.active .hamburger {
+        background: transparent; /* Fades out the middle line */
+    }
+    .nav-toggle.active .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    body > main {
+        overflow: hidden;
+    }
+}

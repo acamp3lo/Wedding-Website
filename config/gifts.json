@@ -1,0 +1,109 @@
+{
+  "gifts": [
+    {
+      "id": 1,
+      "name": "Sofa",
+      "value": 1300
+    },
+    {
+      "id": 2,
+      "name": "Armchair",
+      "value": 700
+    },
+    {
+      "id": 3,
+      "name": "Dining Table",
+      "value": 700
+    },
+    {
+      "id": 4,
+      "name": "Sideboard",
+      "value": 800
+    },
+    {
+      "id": 5,
+      "name": "Dining Table Chair Set",
+      "value": 800
+    },
+    {
+      "id": 6,
+      "name": "Cookware Set",
+      "value": 500
+    },
+    {
+      "id": 7,
+      "name": "Dinnerware Set",
+      "value": 500
+    },
+    {
+      "id": 8,
+      "name": "Glassware Set",
+      "value": 120
+    },
+    {
+      "id": 9,
+      "name": "Bookcase",
+      "value": 300
+    },
+    {
+      "id": 10,
+      "name": "Coffe Machine",
+      "value": 120
+    },
+    {
+      "id": 11,
+      "name": "Sewing Machine",
+      "value": 350
+    },
+    {
+      "id": 12,
+      "name": "Tea Set",
+      "value": 300
+    },
+    {
+      "id": 13,
+      "name": "Bed",
+      "value": 1300
+    },
+    {
+      "id": 14,
+      "name": "Desk",
+      "value": 400
+    },
+    {
+      "id": 15,
+      "name": "Bedside Tables",
+      "value": 300
+    },
+    {
+      "id": 16,
+      "name": "Wardrobe",
+      "value": 700
+    },
+    {
+      "id": 17,
+      "name": "TV",
+      "value": 600
+    },
+    {
+      "id": 18,
+      "name": "Vaccum Cleaner",
+      "value": 400
+    },
+    {
+      "id": 19,
+      "name": "Kitchen Knife Set",
+      "value": 150
+    },
+    {
+      "id": 20,
+      "name": "Lamp",
+      "value": 150
+    },
+    {
+      "id": 21,
+      "name": "Honeymoon",
+      "value": 9999999
+    }
+  ]
+}
