@@ -42,12 +42,13 @@ drawFooter($config);
             <h2>Import</h2>
             <?php if( $config['enable_gift_list'] ) { ?>
                 <p><strong>Caution:</strong> Importing a gift list will overwrite the existing one.</p>
-                <form id="importCSVForm" action="/actions/importGiftsFromCSV.php" method="POST" enctype="multipart/form-data">
+                <form class="importForm" action="/actions/importGiftsFromCSV.php" method="POST" enctype="multipart/form-data">
                     <input type="file" name="csv_file" accept=".csv" required>
                     <button type="submit">Import Gift List (CSV)</button>
                 </form>
-                <form action="/actions/importGiftsFromJson.php" method="POST">
-                    <button type="submit">Import Gift List from gift_list.json</button>
+                <form class="importForm" action="/actions/importGiftsFromJson.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="json_file" accept=".json" required>
+                    <button type="submit">Import Gift List (JSON)</button>
                 </form>
             <?php } else { ?>
                 <p>Nothing to show. Gift list functionality is disabled.</p>

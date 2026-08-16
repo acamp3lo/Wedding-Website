@@ -45,7 +45,7 @@ main > .adminPanelSection > form {
     width: 100%;
 }
 
-main > .adminPanelSection > #importCSVForm {
+main > .adminPanelSection > .importForm {
     margin-bottom: 1rem;
     padding: 0.4rem;
     border: 1px dotted var(--color-pallet-2);

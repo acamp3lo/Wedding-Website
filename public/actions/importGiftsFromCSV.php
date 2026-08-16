@@ -45,7 +45,7 @@
                 $delimiter = detectCsvDelimiter($fileTmpPath);
                 $newGifts = array();
 
-                while( ($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE ) {
+                while( ($row = fgetcsv($handle, 1000, $delimiter, '"', "\\")) !== FALSE ) {
                     $lineNumber++;
                     if ($lineNumber === 1) continue; // Skip header
 
